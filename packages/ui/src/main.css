@@ -63,3 +63,115 @@
    and also:
    @source "../node_modules/@openai/apps-sdk-ui";
 */
+
+/* ChatGPT Foundations: Typography */
+:root {
+  /* Font families */
+  --cg-font-family-web: "SF Pro", "SF Pro Text", "SF Pro Display", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  --cg-font-family-ios: "SF Pro";
+  --cg-font-family-android: "Roboto";
+
+  /* Web typography scale */
+  --cg-type-web-h1-size: 36px;
+  --cg-type-web-h1-weight: 600;
+  --cg-type-web-h1-line: 40px;
+  --cg-type-web-h1-letter: -0.1px;
+
+  --cg-type-web-h2-size: 24px;
+  --cg-type-web-h2-weight: 600;
+  --cg-type-web-h2-line: 28px;
+  --cg-type-web-h2-letter: -0.25px;
+
+  --cg-type-web-h3-size: 18px;
+  --cg-type-web-h3-weight: 600;
+  --cg-type-web-h3-line: 26px;
+  --cg-type-web-h3-letter: -0.45px;
+
+  --cg-type-web-body-size: 16px;
+  --cg-type-web-body-weight-regular: 400;
+  --cg-type-web-body-weight-emphasized: 600;
+  --cg-type-web-body-line: 26px;
+  --cg-type-web-body-letter: -0.4px;
+
+  --cg-type-web-body-sm-size: 14px;
+  --cg-type-web-body-sm-weight-regular: 400;
+  --cg-type-web-body-sm-weight-emphasized: 600;
+  --cg-type-web-body-sm-line: 18px;
+  --cg-type-web-body-sm-letter: -0.3px;
+
+  --cg-type-web-caption-size: 12px;
+  --cg-type-web-caption-weight-regular: 400;
+  --cg-type-web-caption-weight-emphasized: 600;
+  --cg-type-web-caption-line: 16px;
+  --cg-type-web-caption-letter: -0.1px;
+
+  /* iOS typography scale */
+  --cg-type-ios-h1-size: 32px;
+  --cg-type-ios-h1-weight: 600;
+  --cg-type-ios-h1-line: 40px;
+  --cg-type-ios-h1-letter: -0.1px;
+
+  --cg-type-ios-h2-size: 24px;
+  --cg-type-ios-h2-weight: 600;
+  --cg-type-ios-h2-line: 28px;
+  --cg-type-ios-h2-letter: -0.25px;
+
+  --cg-type-ios-h3-size: 18px;
+  --cg-type-ios-h3-weight: 600;
+  --cg-type-ios-h3-line: 26px;
+  --cg-type-ios-h3-letter: -0.45px;
+
+  --cg-type-ios-body-size: 16px;
+  --cg-type-ios-body-weight-regular: 400;
+  --cg-type-ios-body-weight-emphasized: 600;
+  --cg-type-ios-body-line: 26px;
+  --cg-type-ios-body-letter: -0.4px;
+
+  --cg-type-ios-body-sm-size: 14px;
+  --cg-type-ios-body-sm-weight-regular: 400;
+  --cg-type-ios-body-sm-weight-emphasized: 600;
+  --cg-type-ios-body-sm-line: 18px;
+  --cg-type-ios-body-sm-letter: -0.3px;
+
+  --cg-type-ios-caption-size: 12px;
+  --cg-type-ios-caption-weight-regular: 400;
+  --cg-type-ios-caption-weight-emphasized: 600;
+  --cg-type-ios-caption-line: 16px;
+  --cg-type-ios-caption-letter: -0.1px;
+
+  /* Android typography scale */
+  --cg-type-android-h1-size: 32px;
+  --cg-type-android-h1-weight: 600;
+  --cg-type-android-h1-line: 40px;
+  --cg-type-android-h1-letter: -0.1px;
+
+  --cg-type-android-h2-size: 24px;
+  --cg-type-android-h2-weight: 600;
+  --cg-type-android-h2-line: 28px;
+  --cg-type-android-h2-letter: -0.25px;
+
+  --cg-type-android-h3-size: 16px;
+  --cg-type-android-h3-weight: 600;
+  --cg-type-android-h3-line: 26px;
+  --cg-type-android-h3-letter: 0px;
+
+  --cg-type-android-body-size: 16px;
+  --cg-type-android-body-weight-regular: 400;
+  --cg-type-android-body-weight-emphasized: 600;
+  --cg-type-android-body-line: 26px;
+  --cg-type-android-body-letter: 0px;
+
+  --cg-type-android-body-sm-size: 14px;
+  --cg-type-android-body-sm-weight-regular: 400;
+  --cg-type-android-body-sm-weight-emphasized: 600;
+  --cg-type-android-body-sm-line: 18px;
+  --cg-type-android-body-sm-letter: 0px;
+
+  --cg-type-android-caption-size: 12px;
+  --cg-type-android-caption-weight-regular: 400;
+  --cg-type-android-caption-weight-emphasized: 600;
+  --cg-type-android-caption-line: 16px;
+  --cg-type-android-caption-letter: 0px;
+}
