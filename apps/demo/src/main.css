@@ -1,5 +1,4 @@
-@import "tailwindcss";
-@import "@openai/apps-sdk-ui/css";
+@import "@openai/apps-sdk-ui-kit/main.css";
 
 /* Tailwind v4: scan Apps SDK UI + your source */
 @source "../node_modules/@openai/apps-sdk-ui";
