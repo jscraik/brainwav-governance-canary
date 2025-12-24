@@ -1,6 +1,6 @@
 import * as Popover from "@radix-ui/react-popover";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Plus, Send, Trash2, RotateCcw, Check, ChevronDown } from "lucide-react";
 
 type Message = { id: string; role: "user" | "assistant"; text: string; ts: number };

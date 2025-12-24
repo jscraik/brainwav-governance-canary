@@ -9,6 +9,7 @@ export function AppShell({
   sidebarOpen: boolean;
   onToggleSidebar: () => void;
 }) {
+  void onToggleSidebar;
   return (
     <div className="min-h-dvh bg-black text-white">
       <div className="flex min-h-dvh">
