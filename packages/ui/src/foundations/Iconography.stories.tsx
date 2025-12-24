@@ -112,18 +112,18 @@ const sections: Section[] = [
   {
     title: "Arrows",
     items: [
-      { name: "ArrowLeft", Icon: ArrowLeft },
-      { name: "ArrowRight", Icon: ArrowRight },
       { name: "ArrowUp", Icon: ArrowUp },
       { name: "ArrowDown", Icon: ArrowDown },
-      { name: "ChevronLeft", Icon: ChevronLeft },
-      { name: "ChevronRight", Icon: ChevronRight },
+      { name: "ArrowRight", Icon: ArrowRight },
+      { name: "ArrowLeft", Icon: ArrowLeft },
+      { name: "CornerDownRight", Icon: CornerDownRight },
+      { name: "CornerDownLeft", Icon: CornerDownLeft },
       { name: "ChevronUp", Icon: ChevronUp },
       { name: "ChevronDown", Icon: ChevronDown },
-      { name: "ChevronsLeft", Icon: ChevronsLeft },
+      { name: "ChevronRight", Icon: ChevronRight },
+      { name: "ChevronLeft", Icon: ChevronLeft },
       { name: "ChevronsRight", Icon: ChevronsRight },
-      { name: "CornerDownLeft", Icon: CornerDownLeft },
-      { name: "CornerDownRight", Icon: CornerDownRight },
+      { name: "ChevronsLeft", Icon: ChevronsLeft },
       { name: "ExternalLink", Icon: ExternalLink },
     ],
   },
@@ -237,26 +237,28 @@ const sections: Section[] = [
   },
 ];
 
-export const Overview: Story = {
+export const PublicComponents: Story = {
   render: () => (
-    <div className="min-h-dvh bg-black text-white">
-      <div className="mx-auto max-w-[1200px] px-8 py-10">
-        <div className="text-2xl font-semibold">ChatGPT Foundations — Iconography</div>
-        <div className="mt-2 text-sm opacity-70">Base icon set for Apps SDK UI</div>
+    <div className="min-h-dvh bg-[#f7f7f7] text-black" style={{ fontFamily: "var(--cg-font-family-web)" }}>
+      <div className="mx-auto max-w-[1200px] px-10 py-12">
+        <div className="flex items-center gap-3 text-sm font-semibold tracking-wide uppercase">
+          <span>Iconography</span>
+        </div>
+        <div className="mt-3 h-px w-full bg-black" />
 
-        <div className="mt-8 space-y-6">
+        <div className="mt-6 text-4xl font-semibold">Iconography</div>
+
+        <div className="mt-10 text-xs font-semibold uppercase tracking-widest">Public component(s)</div>
+        <div className="mt-3 h-px w-full bg-black" />
+
+        <div className="mt-8 space-y-8">
           {sections.map((section) => (
-            <section key={section.title} className="rounded-2xl border border-white/10 bg-white/5 p-4">
-              <div className="text-sm font-semibold">{section.title}</div>
-              <div className="mt-4 grid gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+            <section key={section.title}>
+              <div className="text-base font-semibold">{section.title}</div>
+              <div className="mt-4 grid grid-cols-6 gap-4 md:grid-cols-10">
                 {section.items.map(({ name, Icon }) => (
-                  <div key={name} className="rounded-xl border border-white/10 bg-black/20 p-3">
-                    <div className="flex items-center gap-2">
-                      <div className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 bg-white/5">
-                        <Icon className="h-5 w-5 opacity-80" />
-                      </div>
-                      <div className="text-xs opacity-80">{name}</div>
-                    </div>
+                  <div key={name} className="flex items-center justify-center">
+                    <Icon className="h-5 w-5" />
                   </div>
                 ))}
               </div>
