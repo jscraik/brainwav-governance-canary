@@ -3,4 +3,5 @@
 
 /* Tailwind v4: scan Apps SDK UI + your source */
 @source "../node_modules/@openai/apps-sdk-ui";
+@source "../../packages/ui/src";
 @source "./";

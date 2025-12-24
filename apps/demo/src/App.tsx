@@ -1,15 +1,28 @@
+// REPOMARK:SCOPE: 1 - Replace local component/lib/model imports with UI kit imports
 import { useEffect, useMemo, useState } from "react";
-import { AppShell } from "./components/shell/AppShell";
-import { Sidebar } from "./components/shell/Sidebar";
-import { InstructionsPanel } from "./components/panels/InstructionsPanel";
-import { SelectedFilesPanel } from "./components/panels/SelectedFilesPanel";
-import { ApplyXmlPanel } from "./components/panels/ApplyXmlPanel";
-import { ChatPanel } from "./components/chat/ChatPanel";
-import type { ContextTabId } from "./components/panels/ContextTabStrip";
-import { ContextBuilderPanel } from "./components/panels/ContextBuilderPanel";
-import type { DiscoveryStatus } from "./components/panels/DiscoveryPanel";
-import { loadString, saveString, loadJson, saveJson } from "./lib/persist";
 import {
+  AppShell,
+  Sidebar,
+  InstructionsPanel,
+  SelectedFilesPanel,
+  ApplyXmlPanel,
+  ChatPanel,
+  ContextBuilderPanel,
+  TopHeader,
+  BottomDock,
+  UserMenu,
+  SettingsDialog,
+  buildFileTree,
+  collectLeafPaths,
+  filterTreeByQuery,
+  sortTreeFilesOnly,
+  applySidebarFilters,
+  groupSelectedFiles,
+  sumBytes,
+  loadString,
+  saveString,
+  loadJson,
+  saveJson,
   DISCOVERY_PROVIDERS,
   DEFAULT_PROVIDER,
   DEFAULT_MODEL_BY_PROVIDER,
@@ -18,21 +31,12 @@ import {
   DEFAULT_PLAN_MODEL_BY_PROVIDER,
   coerceModelId,
   type ProviderId,
-} from "./data/models";
+  type ContextTabId,
+  type DiscoveryStatus,
+  type SidebarSort,
+  type SidebarFilters,
+} from "@openai/apps-sdk-ui-kit";
 import { MOCK_FILES } from "./data/fileIndex.mock";
-import { groupSelectedFiles, sumBytes } from "./lib/files";
-import {
-  buildFileTree,
-  collectLeafPaths,
-  filterTreeByQuery,
-  sortTreeFilesOnly,
-} from "./lib/fileTree";
-import { applySidebarFilters, type SidebarFilters } from "./lib/fileTreeFilters";
-import { TopHeader } from "./components/shell/TopHeader";
-import { BottomDock } from "./components/shell/BottomDock";
-import type { SidebarSort } from "./components/shell/MoreMenu";
-import { UserMenu } from "./components/shell/UserMenu";
-import { SettingsDialog } from "./components/settings/SettingsDialog";
 
 const KEY_INSTRUCTIONS = "repoPrompt.instructions.v1";
 const KEY_AI_RESPONSE = "repoPrompt.applyXml.aiResponse.v1";
