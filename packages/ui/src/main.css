@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@import "@openai/apps-sdk-ui/css";
+
+/* IMPORTANT (Tailwind v4):
+   In the consuming app's main.css, add:
+   @source "../../packages/ui/src";
+   and also:
+   @source "../node_modules/@openai/apps-sdk-ui";
+*/
