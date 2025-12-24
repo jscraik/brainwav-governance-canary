@@ -22,10 +22,8 @@ export function SettingsDialog({
           ].join(" ")}
           aria-label="Settings"
         >
-          {/* Title bar */}
           <div className="flex items-center justify-between border-b border-white/10 px-5 py-4">
             <Dialog.Title className="text-sm font-semibold">Settings</Dialog.Title>
-
             <Dialog.Close asChild>
               <button
                 type="button"
@@ -37,7 +35,6 @@ export function SettingsDialog({
             </Dialog.Close>
           </div>
 
-          {/* Scroll body */}
           <div className="max-h-[78vh] overflow-auto px-1 py-1">
             <SettingsPage />
           </div>
