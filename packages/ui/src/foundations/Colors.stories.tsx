@@ -11,121 +11,173 @@ export default meta;
 
 type Story = StoryObj;
 
-type Swatch = { name: string; value: string; cssVar?: string };
+type Swatch = {
+  label: string;
+  value: string;
+  text?: string;
+  icon?: boolean;
+};
 
-type Section = {
+type Group = {
   title: string;
-  description?: string;
   swatches: Swatch[];
 };
 
-const sections: Section[] = [
+type Column = {
+  title: string;
+  groups: Group[];
+  dark?: boolean;
+};
+
+const lightGroups: Group[] = [
   {
     title: "Background / Light",
     swatches: [
-      { name: "Primary / 50", value: "#ffffff", cssVar: "--cg-bg-primary-50" },
-      { name: "Secondary / 75", value: "#e8e8e8", cssVar: "--cg-bg-secondary-75" },
-      { name: "Tertiary / 100", value: "#f3f3f3", cssVar: "--cg-bg-tertiary-100" },
-    ],
-  },
-  {
-    title: "Background / Dark",
-    swatches: [
-      { name: "Primary / 50", value: "#212121", cssVar: "--cg-bg-primary-50-dark" },
-      { name: "Secondary / 75", value: "#303030", cssVar: "--cg-bg-secondary-75-dark" },
-      { name: "Tertiary / 100", value: "#414141", cssVar: "--cg-bg-tertiary-100-dark" },
+      { label: "Primary", value: "#ffffff", text: "#FFFFFF" },
+      { label: "Secondary", value: "#e8e8e8", text: "#E8E8E8" },
+      { label: "Tertiary", value: "#f3f3f3", text: "#F3F3F3" },
     ],
   },
   {
     title: "Text / Light",
     swatches: [
-      { name: "Primary", value: "#0D0D0D", cssVar: "--cg-text-primary" },
-      { name: "Secondary", value: "#5D5D5D", cssVar: "--cg-text-secondary" },
-      { name: "Tertiary", value: "#8F8F8F", cssVar: "--cg-text-tertiary" },
-      { name: "Inverted", value: "#8F8F8F", cssVar: "--cg-text-inverted" },
-    ],
-  },
-  {
-    title: "Text / Dark",
-    swatches: [
-      { name: "Primary", value: "#FFFFFF", cssVar: "--cg-text-primary-dark" },
-      { name: "Secondary", value: "#CDCDCD", cssVar: "--cg-text-secondary-dark" },
-      { name: "Tertiary", value: "#AFAFAF", cssVar: "--cg-text-tertiary-dark" },
-      { name: "Inverted", value: "#AFAFAF", cssVar: "--cg-text-inverted-dark" },
+      { label: "Text / Primary", value: "#ffffff", text: "Aa", icon: true },
+      { label: "Text / Secondary", value: "#e8e8e8", text: "Aa", icon: true },
+      { label: "Text / Tertiary", value: "#f3f3f3", text: "Aa", icon: true },
+      { label: "Text / Inverted", value: "#212121", text: "Aa", icon: true },
     ],
   },
   {
     title: "Icon / Light",
     swatches: [
-      { name: "Primary", value: "#0D0D0D", cssVar: "--cg-icon-primary" },
-      { name: "Secondary", value: "#5D5D5D", cssVar: "--cg-icon-secondary" },
-      { name: "Tertiary", value: "#8F8F8F", cssVar: "--cg-icon-tertiary" },
-      { name: "Inverted", value: "#8F8F8F", cssVar: "--cg-icon-inverted" },
+      { label: "Icon / Primary", value: "#ffffff", text: "◎", icon: true },
+      { label: "Icon / Secondary", value: "#e8e8e8", text: "◎", icon: true },
+      { label: "Icon / Tertiary", value: "#f3f3f3", text: "◎", icon: true },
+      { label: "Icon / Inverted", value: "#212121", text: "◎", icon: true },
+    ],
+  },
+  {
+    title: "Accents",
+    swatches: [
+      { label: "Accent / Blue", value: "#0285FF" },
+      { label: "Accent / Red", value: "#E02E2A" },
+      { label: "Accent / Orange", value: "#E25507" },
+      { label: "Accent / Green", value: "#008635" },
+    ],
+  },
+];
+
+const darkGroups: Group[] = [
+  {
+    title: "Background / Dark",
+    swatches: [
+      { label: "Primary", value: "#212121", text: "#212121" },
+      { label: "Secondary", value: "#303030", text: "#303030" },
+      { label: "Tertiary", value: "#414141", text: "#414141" },
+    ],
+  },
+  {
+    title: "Text / Dark",
+    swatches: [
+      { label: "Text / Primary", value: "#1f1f1f", text: "Aa", icon: true, },
+      { label: "Text / Secondary", value: "#2b2b2b", text: "Aa", icon: true, },
+      { label: "Text / Tertiary", value: "#3a3a3a", text: "Aa", icon: true, },
+      { label: "Text / Inverted", value: "#ffffff", text: "Aa", icon: true, },
     ],
   },
   {
     title: "Icon / Dark",
     swatches: [
-      { name: "Primary", value: "#FFFFFF", cssVar: "--cg-icon-primary-dark" },
-      { name: "Secondary", value: "#CDCDCD", cssVar: "--cg-icon-secondary-dark" },
-      { name: "Tertiary", value: "#AFAFAF", cssVar: "--cg-icon-tertiary-dark" },
-      { name: "Inverted", value: "#AFAFAF", cssVar: "--cg-icon-inverted-dark" },
+      { label: "Icon / Primary", value: "#1f1f1f", text: "◎", icon: true },
+      { label: "Icon / Secondary", value: "#2b2b2b", text: "◎", icon: true },
+      { label: "Icon / Tertiary", value: "#3a3a3a", text: "◎", icon: true },
+      { label: "Icon / Inverted", value: "#ffffff", text: "◎", icon: true },
     ],
   },
   {
-    title: "Accents / Light",
+    title: "Accents",
     swatches: [
-      { name: "Accent / Blue", value: "#0285FF", cssVar: "--cg-accent-blue" },
-      { name: "Accent / Red", value: "#E02E2A", cssVar: "--cg-accent-red" },
-      { name: "Accent / Orange", value: "#E25507", cssVar: "--cg-accent-orange" },
-      { name: "Accent / Green", value: "#008635", cssVar: "--cg-accent-green" },
-    ],
-  },
-  {
-    title: "Accents / Dark",
-    swatches: [
-      { name: "Accent / Blue", value: "#0285FF", cssVar: "--cg-accent-blue-dark" },
-      { name: "Accent / Red", value: "#FF8583", cssVar: "--cg-accent-red-dark" },
-      { name: "Accent / Orange", value: "#FF9E6C", cssVar: "--cg-accent-orange-dark" },
-      { name: "Accent / Green", value: "#40C977", cssVar: "--cg-accent-green-dark" },
+      { label: "Accent / Blue", value: "#0285FF" },
+      { label: "Accent / Red", value: "#FF8583" },
+      { label: "Accent / Orange", value: "#FF9E6C" },
+      { label: "Accent / Green", value: "#40C977" },
     ],
   },
 ];
 
+const columns: Column[] = [
+  { title: "Colors / light mode", groups: lightGroups },
+  { title: "Colors / dark mode", groups: darkGroups, dark: true },
+];
+
 export const Overview: Story = {
   render: () => (
-    <div className="min-h-dvh bg-black text-white">
-      <div className="mx-auto max-w-[1200px] px-8 py-10">
-        <div className="text-2xl font-semibold">ChatGPT Foundations — Colors</div>
-        <div className="mt-2 text-sm opacity-70">
-          Foundation palette shared across Apps SDK UI components.
+    <div className="min-h-dvh bg-white text-black" style={{ fontFamily: "var(--cg-font-family-web)" }}>
+      <div className="mx-auto max-w-[1200px] px-10 py-10">
+        <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest">
+          <span>Foundations</span>
         </div>
+        <div className="mt-3 h-px w-full bg-black" />
 
-        <div className="mt-8 grid gap-8 md:grid-cols-2">
-          {sections.map((section) => (
-            <div key={section.title} className="rounded-2xl border border-white/10 bg-white/5 p-4">
-              <div className="text-sm font-semibold">{section.title}</div>
-              {section.description ? (
-                <div className="mt-1 text-xs opacity-70">{section.description}</div>
-              ) : null}
-              <div className="mt-4 grid grid-cols-2 gap-3">
-                {section.swatches.map((swatch) => (
-                  <div key={swatch.name} className="rounded-xl border border-white/10 bg-black/20 p-3">
-                    <div className="flex items-center justify-between gap-3">
-                      <div className="text-xs opacity-80">{swatch.name}</div>
-                      <div className="text-[10px] opacity-50">{swatch.value}</div>
-                    </div>
-                    <div
-                      className="mt-3 h-10 w-full rounded-lg border border-white/10"
-                      style={{ backgroundColor: swatch.value }}
-                    />
-                    {swatch.cssVar ? (
-                      <div className="mt-2 text-[10px] opacity-50">{swatch.cssVar}</div>
-                    ) : null}
+        <div className="mt-6 text-4xl font-semibold">Color</div>
+
+        <div className="mt-10 grid gap-8 lg:grid-cols-2">
+          {columns.map((column) => (
+            <section
+              key={column.title}
+              className={[
+                "rounded-2xl border border-black/10 p-4",
+                column.dark ? "bg-[#232323] text-white" : "bg-white",
+              ].join(" ")}
+            >
+              <div className="text-sm font-semibold">{column.title}</div>
+
+              {column.groups.map((group) => (
+                <div key={group.title} className="mt-6">
+                  <div className={"text-xs font-semibold"}>{group.title}</div>
+                  <div
+                    className={[
+                      "mt-2 h-px w-full",
+                      column.dark ? "bg-white/20" : "bg-black",
+                    ].join(" ")}
+                  />
+                  <div className="mt-4 grid gap-3 sm:grid-cols-3">
+                    {group.swatches.map((swatch) => (
+                      <div
+                        key={swatch.label}
+                        className={[
+                          "rounded-xl border p-3",
+                          column.dark ? "border-white/10 bg-[#1f1f1f]" : "border-black/10 bg-white",
+                        ].join(" ")}
+                      >
+                        <div
+                          className={[
+                            "flex h-16 w-full items-center justify-center rounded-lg border",
+                            column.dark ? "border-white/10" : "border-black/10",
+                          ].join(" ")}
+                          style={{ backgroundColor: swatch.value }}
+                        >
+                          {swatch.text ? (
+                            <div
+                              className={[
+                                "text-sm font-semibold",
+                                swatch.value.toLowerCase() === "#ffffff" ? "text-black" : "text-white",
+                              ].join(" ")}
+                            >
+                              {swatch.text}
+                            </div>
+                          ) : null}
+                        </div>
+                        <div className="mt-2 text-[11px] font-semibold">{swatch.label}</div>
+                        <div className={column.dark ? "text-[10px] text-white/50" : "text-[10px] text-black/50"}>
+                          {swatch.value.toUpperCase()}
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
-            </div>
+                </div>
+              ))}
+            </section>
           ))}
         </div>
       </div>
