@@ -175,3 +175,22 @@
   --cg-type-android-caption-line: 16px;
   --cg-type-android-caption-letter: 0px;
 }
+
+/* ChatGPT Foundations: Spacing */
+:root {
+  --cg-space-128: 128px;
+  --cg-space-64: 64px;
+  --cg-space-48: 48px;
+  --cg-space-40: 40px;
+  --cg-space-32: 32px;
+  --cg-space-24: 24px;
+  --cg-space-20: 20px;
+  --cg-space-16: 16px;
+  --cg-space-12: 12px;
+  --cg-space-8: 8px;
+  --cg-space-6: 6px;
+  --cg-space-4: 4px;
+  --cg-space-2: 2px;
+  --cg-space-1: 1px;
+  --cg-space-0: 0px;
+}
