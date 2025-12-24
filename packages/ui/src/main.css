@@ -1,6 +1,62 @@
 @import "tailwindcss";
 @import "@openai/apps-sdk-ui/css";
 
+/* ChatGPT Foundations: Colors */
+:root {
+  /* Surface */
+  --cg-bg-light: #ffffff;
+  --cg-bg-dark: #0d0d0d;
+
+  /* Background scale (light/dark) */
+  --cg-bg-primary-50: #ffffff;
+  --cg-bg-secondary-75: #e8e8e8;
+  --cg-bg-tertiary-100: #f3f3f3;
+  --cg-bg-primary-50-dark: #212121;
+  --cg-bg-secondary-75-dark: #303030;
+  --cg-bg-tertiary-100-dark: #414141;
+
+  /* Text (light) */
+  --cg-text-primary: #0d0d0d;
+  --cg-text-secondary: #5d5d5d;
+  --cg-text-tertiary: #8f8f8f;
+  --cg-text-inverted: #8f8f8f;
+
+  /* Text (dark) */
+  --cg-text-primary-dark: #ffffff;
+  --cg-text-secondary-dark: #cdcdcd;
+  --cg-text-tertiary-dark: #afafaf;
+  --cg-text-inverted-dark: #afafaf;
+
+  /* Icon (light) */
+  --cg-icon-primary: #0d0d0d;
+  --cg-icon-secondary: #5d5d5d;
+  --cg-icon-tertiary: #8f8f8f;
+  --cg-icon-inverted: #8f8f8f;
+
+  /* Icon (dark) */
+  --cg-icon-primary-dark: #ffffff;
+  --cg-icon-secondary-dark: #cdcdcd;
+  --cg-icon-tertiary-dark: #afafaf;
+  --cg-icon-inverted-dark: #afafaf;
+
+  /* Accents (light) */
+  --cg-accent-blue: #0285ff;
+  --cg-accent-red: #e02e2a;
+  --cg-accent-orange: #e25507;
+  --cg-accent-green: #008635;
+
+  /* Accents (dark) */
+  --cg-accent-blue-dark: #0285ff;
+  --cg-accent-red-dark: #ff8583;
+  --cg-accent-orange-dark: #ff9e6c;
+  --cg-accent-green-dark: #40c977;
+}
+
+/* Optional theme hook (apps can set data-theme="dark") */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
+
 /* IMPORTANT (Tailwind v4):
    In the consuming app's main.css, add:
    @source "../../packages/ui/src";
