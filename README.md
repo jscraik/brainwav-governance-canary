@@ -20,3 +20,20 @@ From the repo root:
 
 - The UI library exports components and `main.css`.
 - The demo app consumes `@openai/apps-sdk-ui-kit` via workspace dependency.
+
+## Foundations (required)
+
+All apps must import the ChatGPT Foundations from the UI kit in their entry CSS. Use:
+
+```css
+@import "@openai/apps-sdk-ui-kit/main.css";
+
+/* Tailwind v4 scan sources */
+@source "../node_modules/@openai/apps-sdk-ui";
+@source "../../packages/ui/src";
+@source "./";
+```
+
+## App template
+
+Use `apps/_template` as the base for new apps. It includes the foundations import in `src/main.css`.

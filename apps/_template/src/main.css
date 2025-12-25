@@ -1,0 +1,6 @@
+@import "@openai/apps-sdk-ui-kit/main.css";
+
+/* Tailwind v4 scan sources */
+@source "../node_modules/@openai/apps-sdk-ui";
+@source "../../packages/ui/src";
+@source "./";
