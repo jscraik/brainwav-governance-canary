@@ -29,7 +29,7 @@
     "eslint-plugin-storybook": "^10.1.10",
     "globals": "^16.5.0",
     "playwright": "^1.57.0",
-    "storybook": "^10.1.10",
+    "storybook": "^10.2.10",
     "tailwindcss": "^4.1.18",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
